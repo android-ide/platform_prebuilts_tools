@@ -1,0 +1,11 @@
+The source code for the classes in this prebuilt can
+be found in the src.zip in this directory.
+
+The objects in this prebuilt directory can also be
+rebuilt using the source archive hosted at
+
+http://projectlombok.org/
+
+Specifically, changeset df3fbf80b9ac3efe67a3b1d2713a0de30b6a74d5
+from
+https://github.com/rzwitserloot/lombok.ast
