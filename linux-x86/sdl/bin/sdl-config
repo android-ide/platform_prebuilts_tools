@@ -40,7 +40,7 @@ while test $# -gt 0; do
       echo $exec_prefix
       ;;
     --version)
-      echo 1.2.12
+      echo 1.2.15
       ;;
     --cflags)
       echo -I${prefix}/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT

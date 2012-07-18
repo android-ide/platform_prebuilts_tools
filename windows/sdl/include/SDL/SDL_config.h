@@ -11,7 +11,7 @@
 #if HAVE_LIBC
 
 /* Useful headers */
-/* #undef HAVE_ALLOCA_H */
+#define HAVE_ALLOCA_H 1
 #define HAVE_SYS_TYPES_H 1
 #define HAVE_STDIO_H 1
 #define STDC_HEADERS  1
@@ -25,7 +25,7 @@
 #define HAVE_STDINT_H 1
 #define HAVE_CTYPE_H 1
 #define HAVE_MATH_H 1
-/* #undef HAVE_ICONV_H */
+#define HAVE_ICONV_H 1
 #define HAVE_SIGNAL_H 1
 /* #undef HAVE_ALTIVEC_H */
 /* C library functions */
@@ -37,11 +37,11 @@
 #ifndef _WIN32 /* Don't use on Windows */
 #define HAVE_GETENV 1
 #define HAVE_PUTENV 1
-/* #undef HAVE_UNSETENV */
+#define HAVE_UNSETENV 1
 #endif
 #define HAVE_QSORT 1
 #define HAVE_ABS 1
-/* #undef HAVE_BCOPY */
+#define HAVE_BCOPY 1
 #define HAVE_MEMSET 1
 #define HAVE_MEMCPY 1
 #define HAVE_MEMMOVE 1
@@ -50,21 +50,21 @@
 /* #undef HAVE_STRLCPY */
 /* #undef HAVE_STRLCAT */
 #define HAVE_STRDUP 1
-#define HAVE__STRREV 1
-#define HAVE__STRUPR 1
-#define HAVE__STRLWR 1
-/* #undef HAVE_INDEX */
-/* #undef HAVE_RINDEX */
+/* #undef HAVE__STRREV */
+/* #undef HAVE__STRUPR */
+/* #undef HAVE__STRLWR */
+#define HAVE_INDEX 1
+#define HAVE_RINDEX 1
 #define HAVE_STRCHR 1
 #define HAVE_STRRCHR 1
-#define HAVE_ITOA 1
-#define HAVE__LTOA 1
+/* #undef HAVE_ITOA */
+/* #undef HAVE__LTOA */
 /* #undef HAVE__UITOA */
-#define HAVE__ULTOA 1
+/* #undef HAVE__ULTOA */
 #define HAVE_STRTOL 1
 #define HAVE_STRTOUL 1
-#define HAVE__I64TOA 1
-#define HAVE__UI64TOA 1
+/* #undef HAVE__I64TOA */
+/* #undef HAVE__UI64TOA */
 #define HAVE_STRTOLL 1
 #define HAVE_STRTOULL 1
 #define HAVE_STRTOD 1
@@ -72,16 +72,16 @@
 #define HAVE_ATOF 1
 #define HAVE_STRCMP 1
 #define HAVE_STRNCMP 1
-#define HAVE__STRICMP 1
+/* #undef HAVE__STRICMP */
 #define HAVE_STRCASECMP 1
-#define HAVE__STRNICMP 1
+/* #undef HAVE__STRNICMP */
 #define HAVE_VSNPRINTF 1
-/* #undef HAVE_ICONV */
-/* #undef HAVE_SIGACTION */
-/* #undef HAVE_SETJMP */
-/* #undef HAVE_NANOSLEEP */
-/* #undef HAVE_CLOCK_GETTIME */
-/* #undef HAVE_DLVSYM */
+#define HAVE_ICONV 1
+#define HAVE_SIGACTION 1
+#define HAVE_SETJMP 1
+#define HAVE_NANOSLEEP 1
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_DLVSYM 1
 #define HAVE_GETPAGESIZE 1
 #else
 /* We may need some replacement for stdarg.h here */
@@ -89,7 +89,7 @@
 #endif /* HAVE_LIBC */
 
 /* Allow disabling of core subsystems */
-/* #undef SDL_AUDIO_DISABLED */
+#define SDL_AUDIO_DISABLED 1
 #define SDL_CDROM_DISABLED 1
 /* #undef SDL_CPUINFO_DISABLED */
 /* #undef SDL_EVENTS_DISABLED */
@@ -100,21 +100,22 @@
 /* #undef SDL_TIMERS_DISABLED */
 /* #undef SDL_VIDEO_DISABLED */
 
-/* Enable various audio drivers */
-#define SDL_AUDIO_DRIVER_WAVEOUT 1
-
 /* Enable various shared object loading systems */
-#define SDL_LOADSO_WIN32 1
+#define SDL_LOADSO_DLOPEN 1
 
 /* Enable various threading systems */
-#define SDL_THREAD_WIN32 1
+#define SDL_THREAD_PTHREAD 1
+#define SDL_THREAD_PTHREAD_RECURSIVE_MUTEX_NP 1
 
 /* Enable various timer systems */
-#define SDL_TIMER_WIN32 1
+#define SDL_TIMER_UNIX 1
 
 /* Enable various video drivers */
-#define SDL_VIDEO_DRIVER_WINDIB 1
-#define SDL_MAIN_WIN32 1
+#define SDL_VIDEO_DRIVER_X11 1
+#define SDL_VIDEO_DRIVER_X11_DPMS 1
+#define SDL_VIDEO_DRIVER_X11_XINERAMA 1
+#define SDL_VIDEO_DRIVER_X11_XME 1
+#define SDL_MAIN_DUMMY 1
 #define SDL_VIDEO_DRIVER_X11_DYNAMIC "libX11.so.6"
 #define SDL_VIDEO_DRIVER_X11_DYNAMIC_XEXT "libXext.so.6"
 #define SDL_VIDEO_DRIVER_X11_DYNAMIC_XRANDR "libXrandr.so.2"
