@@ -1,6 +1,7 @@
-The objects in this prebuilt directory can be rebuilt
-using the source archive
+The objects in this prebuilt directory can be rebuilt from the source in
+$ANDROID/external/qemu/distrib/sdl-1.2.15.
 
-sdl-1.2.12-android-20080919.tar.gz
-
-hosted at <http://android.kernel.org/pub/>.
+$ cd $ANDROID/external/qemu/distrib/sdl-1.2.15
+$ ./android-configure.sh --prefix $ANDROID/prebuilts/tools/darwin-x86/sdl --no-tiger
+$ make
+$ make install
