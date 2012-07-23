@@ -18,7 +18,8 @@ include $(CLEAR_VARS)
 
 LOCAL_PREBUILT_JAVA_LIBRARIES := \
     asm-tools:asm-4.0$(COMMON_JAVA_PACKAGE_SUFFIX) \
-    asm-tree-tools:asm-tree-4.0$(COMMON_JAVA_PACKAGE_SUFFIX)
+    asm-tree-tools:asm-tree-4.0$(COMMON_JAVA_PACKAGE_SUFFIX) \
+    asm-analysis-tools:asm-analysis-4.0$(COMMON_JAVA_PACKAGE_SUFFIX)
 
 LOCAL_MODULE_TAGS := optional
 
