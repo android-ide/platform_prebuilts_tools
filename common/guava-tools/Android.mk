@@ -17,7 +17,7 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_PREBUILT_JAVA_LIBRARIES := \
-    guava-tools:guava-10.0.1$(COMMON_JAVA_PACKAGE_SUFFIX)
+    guava-tools:guava-13.0.1$(COMMON_JAVA_PACKAGE_SUFFIX)
 
 LOCAL_MODULE_TAGS := optional
 
