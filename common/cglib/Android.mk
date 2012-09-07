@@ -1,4 +1,4 @@
-# Copyright (C) 2008 The Android Open Source Project
+# Copyright (C) 2012 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,13 +16,10 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-# Note: common/cglib 2.2 requires the old asm 3.3.x.
+# Note: To use cglib, please also add target asm-3-tools.
 
 LOCAL_PREBUILT_JAVA_LIBRARIES := \
-    asm-3-tools:asm-3.3.1$(COMMON_JAVA_PACKAGE_SUFFIX) \
-    asm-tools:asm-4.0$(COMMON_JAVA_PACKAGE_SUFFIX) \
-    asm-tree-tools:asm-tree-4.0$(COMMON_JAVA_PACKAGE_SUFFIX) \
-    asm-analysis-tools:asm-analysis-4.0$(COMMON_JAVA_PACKAGE_SUFFIX)
+    cglib:cglib-2.2.3$(COMMON_JAVA_PACKAGE_SUFFIX)
 
 LOCAL_MODULE_TAGS := optional
 
