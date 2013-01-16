@@ -6,11 +6,17 @@ rebuilt using the source archive hosted at
 
 http://projectlombok.org/
 
-Specifically, changeset df3fbf80b9ac3efe67a3b1d2713a0de30b6a74d5
+Specifically, changeset 3c4f94d418b58d55d0facebf2bfbb362d4bf3bdd
 from
 https://github.com/rzwitserloot/lombok.ast
 
-NOTE: Lombok.AST was combined with Guava 13.0.1 to match
+NOTE 1: The 0.2.1 bits were patched by this CL:
+https://github.com/tnorbye/lombok.ast
+which basically adds an extra field to the nodes to track
+the original source AST node. The lombok-ast-0.2.1-src.zip
+includes these diffs.
+
+NOTE 2: Lombok.AST was combined with Guava 13.0.1 to match
 what is used in the rest of the tools, and Guava was also
 removed from the lombok binary (which by default jarjar's it
 into the lombok.jar), since it will always be used in a
